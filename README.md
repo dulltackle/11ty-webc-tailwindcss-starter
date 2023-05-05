@@ -6,18 +6,27 @@ A simpler starter for building [Eleventy](https://www.11ty.dev/) static sites wi
 
 ## Install
 
-1. Clone this repo: `git clone git@github.com:dulltackle/11ty-webc-tailwindcss-starter.git my-awesome-site`
+1. Clone this repo: `git clone --depth 1 git@github.com:dulltackle/11ty-webc-tailwindcss-starter.git my-awesome-site`
 
 2. Change into the working directory: `cd my-awesome-site`
 
 3. Install dependencies: `npm install`
 
-4. Work locally:
+4. Check if works properly:
 
    1. Start the preview server: `npm run dev`
    2. Preview in browser: `http://localhost:8080`
 
-5. If ready, create a production build: `npm run build`
+5. Clean template:
+
+   1. delete template files like `src/_includes/webc/my-counter.webc`
+   2. update info file like `package.json`
+   3. ...
+   4. clean template git repo history: `rm -r .git`
+
+6. Push to your own git repo
+
+7. If ready, create a production build: `npm run build`
 
 ## Pitfalls
 
