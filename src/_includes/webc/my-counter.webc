@@ -1,0 +1,35 @@
+<input type="number" :id="uid" :name="name" :value="value" class="hidden" />
+
+<template>
+  <button
+    type="button"
+    class="px-2 py-1 bg-slate-400 text-white rounded-lg shadow-md"
+  >
+    Add
+  </button>
+  <output :for="uid" @html="value" class="text-2xl font-bold"></output>
+</template>
+
+<script>
+  window.customElements.define(
+    "my-counter",
+    class extends HTMLElement {
+      connectedCallback() {
+        const tmpl = this.querySelector("template");
+        tmpl.replaceWith(tmpl.content);
+
+        const btn = this.querySelector("button");
+        const output = this.querySelector("output");
+        const input = this.querySelector("input");
+
+        let value = parseInt(output.innerText);
+
+        btn.addEventListener("click", () => {
+          value++;
+          output.innerText = value;
+          input.value = value;
+        });
+      }
+    }
+  );
+</script>

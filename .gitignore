@@ -1,0 +1,6 @@
+node_modules
+remote-debug-profile
+.vscode
+_site
+pnpm-lock.yaml
+src/style.css

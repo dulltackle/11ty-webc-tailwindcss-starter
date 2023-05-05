@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A simpler starter for building Eleventy static sites with WebC and Tailwind CSS"
+    />
+    <title>11ty-webc-tailwindcss-starter</title>
+    <link rel="stylesheet" href="./style.css" webc:keep />
+  </head>
+  <body>
+    <div @raw="content" webc:nokeep></div>
+    <script type="module" @raw="getBundle('js')" webc:keep></script>
+  </body>
+</html>

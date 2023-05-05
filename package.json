@@ -1,0 +1,39 @@
+{
+  "name": "11ty-webc-tailwindcss-starter",
+  "version": "1.0.0",
+  "description": "A simpler starter for building Eleventy static sites with WebC and Tailwind CSS",
+  "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "build": "run-s build:*",
+    "dev:css": "tailwindcss -i src/_includes/style.css -o src/style.css --watch",
+    "dev:11ty": "npx @11ty/eleventy --serve --incremental",
+    "build:css": "tailwindcss -i src/_includes/style.css -o src/style.css --minify",
+    "build:11ty": "npx @11ty/eleventy"
+  },
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "tailwindcss",
+    "tailwind",
+    "webc",
+    "starter"
+  ],
+  "author": "dulltackle",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dulltackle/11ty-webc-tailwindcss-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dulltackle/11ty-webc-tailwindcss-starter/issues"
+  },
+  "homepage": "https://github.com/dulltackle/11ty-webc-tailwindcss-starter#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-webc": "^0.11.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.8.7",
+    "tailwindcss": "^3.3.1"
+  }
+}

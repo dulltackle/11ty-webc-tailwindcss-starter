@@ -1,0 +1,83 @@
+---
+layout: "base.webc"
+references:
+  [
+    {
+      "name": "WebC",
+      "description": "first-class components in Eleventy",
+      "address": "https://www.11ty.dev/docs/languages/webc/",
+    },
+    {
+      "name": "Tailwind CSS",
+      "description": "my favorite utility-first CSS framework",
+      "address": "https://tailwindcss.com/",
+    },
+  ]
+counters:
+  [
+    { "name": "first", "value": "3" },
+    { "name": "second", "value": "5" },
+    { "name": "third", "value": "6" },
+    { "name": "fourth", "value": "10" },
+  ]
+---
+
+<div class="max-w-screen-md mx-auto space-y-10">
+  <h1 class="pt-24 pb-6 text-center">
+    <span
+      class="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+      >Hello WebC And Tailwind CSS!</span
+    >
+  </h1>
+
+  <div>
+    <p class="text-2xl">
+      A simpler starter for building Eleventy static sites with:
+    </p>
+    <template webc:type="11ty" 11ty:type="liquid">
+      <ul class="pt-2 list-disc list-inside space-y-2 text-xl">
+        {% for reference in references %}
+        <li>
+          <a
+            href="{{ reference.address }}"
+            target="_blank"
+            class="underline text-blue-500"
+            >{{ reference.name }}</a
+          >: {{ reference.description }}
+        </li>
+        {% endfor %}
+      </ul>
+    </template>
+  </div>
+
+  <template webc:type="11ty" 11ty:type="liquid">
+    <form method="get" class="block space-y-4 text-xl">
+      <div class="flex justify-around">
+        {% for counter in counters %}
+        <my-counter
+          @name="{{ counter.name }}"
+          @value="{{ counter.value }}"
+        ></my-counter>
+        {% endfor %}
+      </div>
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="bg-green-500 p-2 rounded-md text-white shadow-lg"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </template>
+
+  <article class="prose lg:prose-xl">
+    <template webc:type="11ty" 11ty:type="md">
+      See this [code on
+      GitHub](https://github.com/dulltackle/11ty-webc-tailwindcss-starter).
+      *This was originally a demo for a talk given at the [Eleventy Meetup:
+      Adding Components to WebC with
+      Eleventy](https://www.zachleat.com/web/webc-in-eleventy/).*
+    </template>
+  </article>
+</div>
