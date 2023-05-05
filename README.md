@@ -50,7 +50,7 @@ Most of the time, the page in the preview shows the version with the latest CSS 
 
 ## Todo
 
-- [ ] create preview site
+- [x] create preview site
 - [ ] add navigation template
 - [ ] add posts template
 - [ ] add data file template
