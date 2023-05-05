@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
     domDiff: false,
   });
 
+  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
   eleventyConfig.addPassthroughCopy("src/style.css");
 
   return {
