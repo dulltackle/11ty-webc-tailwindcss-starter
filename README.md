@@ -1,5 +1,7 @@
 # 11ty-webc-tailwindcss-starter
 
+![demo](https://user-images.githubusercontent.com/45963660/236358216-bc799425-6eb1-443f-a2dc-72c7ed386d6b.png)
+
 A simpler starter for building [Eleventy](https://www.11ty.dev/) static sites with [WebC](https://www.11ty.dev/docs/languages/webc/) and [Tailwind CSS](https://tailwindcss.com/)
 
 ## Install
@@ -13,13 +15,13 @@ A simpler starter for building [Eleventy](https://www.11ty.dev/) static sites wi
 4. Work locally:
 
    1. Start the preview server: `npm run dev`
-   2. Watch in browser: `http://localhost:8080`
+   2. Preview in browser: `http://localhost:8080`
 
 5. If ready, create a production build: `npm run build`
 
 ## Pitfalls
 
-For the sake of simplicity of structure, there is no build tool like **Webpack**. So Tailwind CSS actually runs **in parallel with** Eleventy, which may causes some problems during development:
+For the sake of simplicity, there is no build tool like **Webpack**. So Tailwind CSS actually runs **in parallel with** Eleventy, which may causes some problems during development:
 
 1. developer adds tailwind utilities to the page(`src/index.webc` for example)
 2. the rebuilding processes of Eleventy and Tailwind CSS are both triggered
@@ -45,3 +47,7 @@ Most of the time, the page in the preview shows the version with the latest CSS 
 
 - [minimal-11ty-tailwind-starter](https://github.com/tomreinert/minimal-11ty-tailwind-starter)
 - [eleventy-tailwind-template](https://github.com/jeremydaly/eleventy-tailwind-template)
+
+## License
+
+[MIT](./LICENSE) License © 2023-Present [dulltackle](https://github.com/dulltackle)
